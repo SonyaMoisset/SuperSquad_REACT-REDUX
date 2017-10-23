@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+// import { bindActionCreators } from 'redux'
+import { addCharacterById } from '../actions'
 
 class CharacterList extends Component {
     render() {
+        console.log('this.props', this.props)
         return (
             <div>
                 <h4>Characters</h4>
@@ -12,6 +15,10 @@ class CharacterList extends Component {
                             return (
                                 <li key={character.id}>
                                     <div>{character.name}</div>
+                                    <div
+                                        onClick={() => this.props.addCharacterById(character.id)}>
+                                        +
+                                    </div>
                                 </li>
                             )
                         })
@@ -23,10 +30,13 @@ class CharacterList extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log('state', state)
     return {
         characters: state.characters
     }
 }
 
-export default connect(mapStateToProps, null)(CharacterList);
+// function mapDispatchToProps(dispatch) {
+//     return bindActionCreators({ addCharacterById }, dispatch)
+// }
+
+export default connect(mapStateToProps, { addCharacterById })(CharacterList);
