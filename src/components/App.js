@@ -8,7 +8,7 @@ import '../styles/index.css'
 class App extends Component {
     render() {
         return (
-            <div className="App">
+            <div className="app">
                 <h2>SuperSquad</h2>
                 <div className="col-md-4">
                     <CharacterList />
