@@ -11,12 +11,15 @@ class HeroList extends Component {
                     {
                         this.props.heroes.map(hero => {
                             return (
-                                <li key={hero.id} className="list-group-item">
-                                    <div className="list-item">
+                                <li
+                                    key={hero.id}
+                                    className="list-group-item">
+                                    <div
+                                        className="list-item">
                                         {hero.name}
                                     </div>
                                     <div
-                                        className="list- right-button"
+                                        className="list-item right-button"
                                         onClick={() => this.props.removeCharacterById(hero.id)}>
                                         x
                                     </div>
@@ -36,4 +39,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {removeCharacterById})(HeroList)
+export default connect(mapStateToProps, { removeCharacterById })(HeroList)

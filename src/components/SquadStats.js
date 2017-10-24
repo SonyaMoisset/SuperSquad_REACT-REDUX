@@ -36,7 +36,7 @@ class SquadStats extends Component {
                     </li>
                 </ul>
             </div>
-        );
+        )
     }
 }
 
