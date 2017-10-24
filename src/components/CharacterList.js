@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-// import { bindActionCreators } from 'redux'
-import { addCharacterById } from '../actions'
+import { addCharacterById } from '../actions/characters_actions'
 
 class CharacterList extends Component {
     render() {
@@ -37,9 +36,5 @@ function mapStateToProps(state) {
         characters: state.characters
     }
 }
-
-// function mapDispatchToProps(dispatch) {
-//     return bindActionCreators({ addCharacterById }, dispatch)
-// }
 
 export default connect(mapStateToProps, { addCharacterById })(CharacterList);

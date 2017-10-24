@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { removeCharacterById } from '../actions'
+import { removeCharacterById } from '../actions/characters_actions'
 
 class HeroList extends Component {
     render() {
