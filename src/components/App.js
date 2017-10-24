@@ -3,8 +3,6 @@ import CharacterList from './CharacterList'
 import HeroList from './HeroList'
 import SquadStats from './SquadStats'
 
-import '../styles/index.css'
-
 class App extends Component {
     render() {
         return (
