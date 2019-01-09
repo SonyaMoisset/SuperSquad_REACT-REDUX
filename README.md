@@ -1,5 +1,7 @@
 # SuperSquad
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/SonyaMoisset/SuperSquad_REACT-REDUX.svg)](https://greenkeeper.io/)
+
 ## A React web application where the user can create a squad of super heroes
 
 To see the project:
